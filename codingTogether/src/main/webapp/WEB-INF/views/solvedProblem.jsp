@@ -14,7 +14,7 @@
 							buttons: [
 								{
 									label: '등록',
-									classes: 'blueB',
+									classes: 'green',
 									action: function() {
 										return $.sweetModal('You clicked Action 2!');
 									}
