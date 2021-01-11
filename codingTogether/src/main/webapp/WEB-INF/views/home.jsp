@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="./resources/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="./resources/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="./resources/css/jquery.sweet-modal.min.css" />
 </head>
 <body>
 
@@ -26,7 +27,7 @@
         <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light green">Get Started</a>
+        <button id="register-button" class="btn-large waves-effect waves-light green">Get Started</button>
       </div>
       <br><br>
 
@@ -70,7 +71,10 @@
     </div>
     <br><br>
   </div>
-
 	<%@ include file="./footer.jsp" %>
+	<script src="./resources/vendor/jquery/jquery.min.js"></script>
+	<script src="./resources/js/jquery.sweet-modal.min.js"></script>
+	
+	<%@ include file="./solvedProblem.jsp" %>
 	</body>
 </html>
