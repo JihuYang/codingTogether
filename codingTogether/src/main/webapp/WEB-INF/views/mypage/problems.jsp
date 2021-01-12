@@ -41,7 +41,7 @@
 </head>
 <body>
 
-<%@ include file="../header.jsp" %>
+<%@ include file="../header2.jsp" %>
 
 <!-- Page Wrapper -->
     <div id="wrapper">
