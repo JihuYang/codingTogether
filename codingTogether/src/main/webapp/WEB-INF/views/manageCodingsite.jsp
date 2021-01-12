@@ -85,16 +85,13 @@
 	display: none;
 }
 </style>
-<%— <script>
-	function delete_ok(id) { `           
+<script>
+	function delete_ok(id) {        
 		var a = confirm("정말로 삭제하겠습니까?");
 		if (a)
 			location.href = 'deleteok/' + id;
-	}
-=
-	
-		 
-</script>—%>
+	} 
+</script>
 
 <title>코딩 사이트 등록 페이지</title>
 </head>
@@ -121,16 +118,6 @@
 					<th></th>
 				</tr>
 
-				<%— 
-  	<c:forEach items="${posts}" var="u">
-  	<tr>
-	    <td>{u.getSitename()}</td>
-	    <td>{u.getSiteurl()}</td>
-	    <td><a href="editform/${u.getSeq()}">수정</a></td>
-	    <td><a href="javascript:delete_ok('${u.getSeq()}')">삭제</a></td>
-	</tr>
-  </c:forEach>
-	    —%>
 				<tr>
 					<td>백준</td>
 					<td><a href="https://www.acmicpc.net/">https://www.acmicpc.net/</a></td>
