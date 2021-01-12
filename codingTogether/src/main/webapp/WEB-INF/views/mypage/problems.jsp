@@ -29,6 +29,14 @@
         .box{
             border: 0;
         }
+        .search{
+        	display: flex;
+        	float: right;
+        	width: 20% !important;
+        }
+        .search_bt{
+        	all:unset;
+        }
     </style>
 </head>
 <body>
@@ -185,7 +193,14 @@
                                 <h6 class="m-0 font-weight-bold text-primary">내가 푼 문제들</h6>
                             </div>
                             <div class="card-body">
-                                    <table class="table table-striped">
+								<fieldset class="search">
+									<input class="search_problem" type="search"
+										placeholder="문제 번호를 입력해주세요." />
+									<button class="search_bt" type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+								</fieldset>
+								<table class="table table-striped">
                                         <thead>
                                           <tr>
                                             <th scope="col">No.</th>
