@@ -30,7 +30,7 @@
 							    </div>\
 						        <div class="input-field col s6">\
 						          <input id="problems" type="text" class="validate">\
-						          <label for="last_name">Problems</label>\
+						          <label for="problems">Problems</label>\
 						          <span class="helper-text">문제들을 입력할 때 ,로 구분해주세요!!</span>\
 						        </div>\
 						        <button type="button" id = "add" class="modal_button green lighten-1">추가</button>\
