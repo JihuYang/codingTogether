@@ -24,6 +24,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../resources/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="../resources/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+    <style>
+        .box{
+            border: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,10 +39,10 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#B7CA79">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="mypage_myproblems.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./problems">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -48,7 +54,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="mypage_myproblems.html">
+                <a class="nav-link" href="./problems">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>내가 푼 문제들</span></a>
             </li>
@@ -58,7 +64,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="mypage_myactivities.html">
+                <a class="nav-link" href="./activities">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>내 기록들</span></a>
             </li>
@@ -68,7 +74,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="mypage_myinfo.html">
+                <a class="nav-link" href="./information">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>내 정보</span></a>
             </li>
@@ -194,21 +200,24 @@
                                             <th scope="row">1</th>
                                             <td>1002</td>
                                             <td>터렛</td>
-                                            <td><a href="https://www.acmicpc.net/problem/1002">https://www.acmicpc.net/problem/1002</a></td>
+                                            <td><a href="https://www.acmicpc.net/problem/1002" target="_blank">
+                                            https://www.acmicpc.net/problem/1002</a></td>
                                             <td>2021-01-02</td>
                                           </tr>
                                           <tr>
                                             <th scope="row">2</th>
                                             <td>3002</td>
                                             <td>피보나치 함수</td>
-                                            <td><a href="https://www.acmicpc.net/problem/3002">https://www.acmicpc.net/problem/3002</a></td>
+                                            <td><a href="https://www.acmicpc.net/problem/3002" target="_blank">
+                                            https://www.acmicpc.net/problem/3002</a></td>
                                             <td>2021-01-02</td>
                                           </tr>
                                           <tr>
                                             <th scope="row">3</th>
                                             <td>2004</td>
                                             <td>어린 왕자</td>
-                                            <td><a href="https://www.acmicpc.net/problem/2004">https://www.acmicpc.net/problem/2004</a></td>
+                                            <td><a href="https://www.acmicpc.net/problem/2004" target="_blank">
+                                            https://www.acmicpc.net/problem/2004</a></td>
                                             <td>2021-01-02</td>
                                           </tr>
                                         </tbody>
@@ -223,46 +232,13 @@
         </div>
         <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <!-- <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
-                    </div>
-                </div>
-            </footer> -->
-            <!-- End of Footer -->
-
         </div>
         <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
-    <!-- Logout Modal-->
-    <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 	<%@ include file="../footer.jsp" %>
 	
@@ -284,6 +260,25 @@
     <script src="../resources/js/demo/chart-pie-demo.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- 차트 --> 
+    <script> 
+    data = { 
+        datasets: [{ 
+            backgroundColor: ['lightblue','yellow'], 
+            data: [100, 20] 
+        }],
+        labels: ['총 문제수','푼 문제수'] };
+    var ctx = document.getElementById("myChart"); 
+    var myDoughnutChart = new Chart(ctx, { 
+        type: 'doughnut', 
+        data: data, 
+        options: {
+            legend: {
+                display: false
+            }
+        } 
+    }); 
+    </script>
     
     </body>
 </html>
