@@ -10,7 +10,7 @@
 							content: '<div class = "container"><form class="col s12">\
 						      <div class="row">\
 						      	<div class="input-field col s4">\
-							      <select id = "siteName">\
+							      <select id = "siteName" required>\
 								      <optgroup label="코딩사이트 선택">\
 								      	<option value="" disabled selected>코딩사이트 별 입력</option>\
 								        <option value="1">백준</option>\
@@ -22,7 +22,7 @@
 								        <option value="7">leetcode(database)</option>\
 								      </optgroup>\
 								      <optgroup label="링크로 입력">\
-								        <option value="link">링크로 입력</option>\
+								        <option value="8">링크로 입력</option>\
 								      </optgroup>\
 							      </select>\
 							      <label>코딩사이트 선택</label>\
@@ -33,13 +33,12 @@
 						          <label for="problems">Problems</label>\
 						          <span class="helper-text">문제들을 입력할 때 ,로 구분해주세요!!</span>\
 						        </div>\
-						        <button type="button" id = "add" class="modal_button green lighten-1">추가</button>\
+						        <button type="button" id = "add" class="modal_button green lighten-1" onClick = "insertProblems()">추가</button>\
 						      </div>\
 						      <div class="input-field col s10">\
 						      <label for="last_name">입력한 Problems</label>\
 						      <br><br>\
 						      <div id = "confirmSite">\
-					          <input disabled value="1022 (백준 사이트)" id="last_name disabled" type="text" class="validate">\
 					          </div>\
 					        </div>\
 						    </form></div>',
@@ -65,26 +64,38 @@
 		};
 		
 		var variant = variants['register-button'];
-		
+
 		$('#register-button').on('click', { variant: variant }, function(e) {
 			var variant = e.data.variant;
 
 			variant.fn = variant.fn || $.sweetModal;
 			variant.fn.apply(this, variant.args);
 			$('select').formSelect();
-			$('#add').addEventListener("click", insertProblems);
 			
 		});
 		
 	});
 
+	function deleteThis(id){
+		var allid = "#"+id;
+		$(allid).remove();
+	}
+	
+	var count=0;
 	function insertProblems(){
+		var array = ['', '백준', 'leetcode', 'SW expert academy', 'oncoder', 'goorm', 'leetcode[database]', 'link'];
 		var site = $("#siteName option:selected").val();
 		var value = document.getElementById("problems").value;
-		var valueSplit = value.split(',')
+		var valueSplit = value.split(',');
 		var data = $('#confirmSite').html();
-		for(var i in valueSplit)
-			data += '<input disabled value="'+i+' ('+site+')" id="last_name disabled" type="text" class="validate">';
-		$('#confirmSite').html(data);
+		for(var i in valueSplit){
+			data += '<div id = "confirmProblemValue'+count+'" onClick="deleteThis(\'confirmProblemValue'+count+'\')"><input disabled value="'+valueSplit[i]+' ('+array[site]+')" id="last_name disabled" type="text" class="validate"/></div>';
+			count++;
 		}
+		$('#confirmSite').html(data);
+		document.getElementById("problems").value = "";
+		$("#siteName option:selected").val("");
+	}
+
+
 </script>
