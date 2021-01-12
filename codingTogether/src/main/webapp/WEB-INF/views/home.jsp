@@ -71,8 +71,8 @@
     </div>
     <br><br>
   </div>
-	<%@ include file="./footer.jsp" %>
 	<script src="./resources/vendor/jquery/jquery.min.js"></script>
+	<%@ include file="./footer.jsp" %>
 	<script src="./resources/js/jquery.sweet-modal.min.js"></script>
 	
 	<%@ include file="./solvedProblem.jsp" %>
