@@ -121,39 +121,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<div>
-		
-	</div>
-	
-	<div class="row">\
-	<form class="col s12">\
-						      <div class="row">\
-						      	<div class="input-field col s4">\
-							      <select>\
-								      <optgroup label="코딩사이트 선택">\
-								      	<option value="" disabled selected>코딩사이트 별 입력</option>\
-								        <option value="1">백준</option>\
-								        <option value="2">leetcode</option>\
-								        <option value="3">SW expert academy</option>\
-								        <option value="4">programmers</option>\
-								        <option value="5">oncoder</option>\
-								        <option value="6">goorm</option>\
-								        <option value="7">leetcode(database)</option>\
-								      </optgroup>\
-								      <optgroup label="링크로 입력">\
-								        <option value="link">링크로 입력</option>\
-								      </optgroup>\
-							      </select>\
-							      <label>코딩사이트 선택</label>\
-							    </div>\
-						        <div class="input-field col s4">\
-						          <input id="last_name" type="text" class="validate">\
-						          <label for="last_name">Last Name</label>\
-						        </div>\
-						      </div>\
-						    </form>\
-						  </div>
 
     <br><br>
   </div>
