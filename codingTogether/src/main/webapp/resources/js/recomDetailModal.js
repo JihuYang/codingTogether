@@ -4,47 +4,45 @@
 				'title': {
 					args: [
 						{
-							content: '<div class="row">\
-							    <form class="col s12">\
-						      <div class="row">\
-						      	<div class="input-field col s4">\
-							      <select>\
-								      <optgroup label="코딩사이트 선택">\
-								      	<option value="" disabled selected>코딩사이트 별 입력</option>\
-								        <option value="1">백준</option>\
-								        <option value="2">leetcode</option>\
-								        <option value="3">SW expert academy</option>\
-								        <option value="4">programmers</option>\
-								        <option value="5">oncoder</option>\
-								        <option value="6">goorm</option>\
-								        <option value="7">leetcode(database)</option>\
-								      </optgroup>\
-								      <optgroup label="링크로 입력">\
-								        <option value="link">링크로 입력</option>\
-								      </optgroup>\
-							      </select>\
-							      <label>코딩사이트 선택</label>\
-							    </div>\
-						        <div class="input-field col s4">\
-						          <input id="last_name" type="text" class="validate">\
-						          <label for="last_name">Last Name</label>\
-						        </div>\
-						      </div>\
-						    </form>\
-						  </div>',
-							title: '푼 문제 등록',
+							content: '<div>\
+			    	<table>\
+				    	<tr>\
+				    		<th>문제</th>\
+				    		<td><input type="text" id="site" value="백준" readonly /></td>\
+				    		<td><input type="text" id="title" value="소수 판별" readonly /></td>\
+				    		<td><input type="text" id="level" value="3" readonly /></td>\
+				    		<td><label><input type="checkbox" name="done" value="done"></label></td>\
+				    	</tr>\
+				    	<tr>\
+				    		<th>태그</th>\
+				    		<td>반복문</td>\
+				    		<td>정렬</td>\
+				    		<td>소수</td>\
+				    		<td>배열</td>\
+				    	</tr>\
+				    	<tr>\
+				    		<th>내용</th>\
+				    		<td colspan="4"><input type="textarea" id="content" value="백준 100문제 모음집입니다." readonly /></td>\
+				    	</tr>\
+						<tr>\
+				    		<th>추천</th>\
+				    		<td colspan="4"><input type="button" id="recom" value="추천" /></td>\
+				    	</tr>\
+			    	</table>\
+				</div>',
+							title: '100문제',
 							showCloseButton: true,
 
 							buttons: [
 								{
-									label: '등록',
+									label: '확인',
 									classes: 'green',
 									action: function() {
 										//여기서 ajax 처리!
-										return $.sweetModal({
+										/*return $.sweetModal({
 											content: '<p style = "font-weight:800; font-size:15px; padding-top: 15px;">데이터가 등록 되었습니다~:)</p>',
 											icon: $.sweetModal.ICON_SUCCESS
-										});
+										});*/
 									}
 								}
 							]
