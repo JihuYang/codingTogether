@@ -18,6 +18,7 @@
 	media="screen,projection" />
 <link rel="stylesheet" href="./resources/css/jquery.sweet-modal.min.css" />
 <link rel="stylesheet" href="./resources/css/home.css" />
+<link rel="stylesheet" href="./resources/css/solvedProblem.css" />
 
 </head>
 <body>
