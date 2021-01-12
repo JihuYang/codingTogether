@@ -72,7 +72,7 @@
 			variant.fn = variant.fn || $.sweetModal;
 			variant.fn.apply(this, variant.args);
 			$('select').formSelect();
-			//$('#add').addEventListener("click", insertProblems());
+			$('#add').addEventListener("click", insertProblems);
 			
 		});
 		
