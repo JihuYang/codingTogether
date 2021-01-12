@@ -35,11 +35,6 @@ public class HomeController {
 		return "manageCodingsite";
 	}
 	
-	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
-	public String mypage() {
-		return "mypage/problems";
-	}
-	
 	@RequestMapping(value = "/mypage/information", method = RequestMethod.GET)
 	public String information() {
 		return "mypage/information";
