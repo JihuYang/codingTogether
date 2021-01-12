@@ -26,14 +26,14 @@
 				<br><br>
 				<fieldset>
 				     <input class="searchText" type="search" placeholder="검색어를 입력해주세요." />
-				     <button class="searchBtn"><i class="fa fa-search"></i></button>
+				     <button class="searchBtn green"><i class="fa fa-search"></i></button>
 				</fieldset>
 				
 				<ul>
-			      <li><button class="sortBtn">난이도순</button></li>
-			      <li><button class="sortBtn">제목순</button></li>
-			      <li><button class="sortBtn">추천순</button></li>
-			      <li><button class="sortBtn">최신순</button></li>
+			      <li><button class="sortBtn green">난이도순</button></li>
+			      <li><button class="sortBtn green">제목순</button></li>
+			      <li><button class="sortBtn green">추천순</button></li>
+			      <li><button class="sortBtn green">최신순</button></li>
 			    </ul>
 			    
 			    <button class="addBtn">문제 추천 추가</button>
@@ -57,33 +57,6 @@
 			        	</tr>
 			      	</tbody>
 			    </table>
-			    
-			    <div>
-			    	<table>
-			    		<tr>
-				    		<th>제목</th>
-				    		<td colspan="4"><input type="text" id="modal_title" value="100문제" readonly /></td>
-				    	</tr>
-				    	<tr>
-				    		<th>문제</th>
-				    		<td><input type="text" id="txt2" value="백준" readonly /></td>
-				    		<td><input type="text" id="txt3" value="소수 판별" readonly /></td>
-				    		<td><input type="text" id="txt4" value="3" readonly /></td>
-				    		<td><input type="checkbox" name="done" value="done"></td>
-				    	</tr>
-				    	<tr>
-				    		<th>태그</th>
-				    		<td>반복문</td>
-				    		<td>태그2</td>
-				    		<td>태그3</td>
-				    		<td>태그4</td>
-				    	</tr>
-				    	<tr>
-				    		<th>내용</th>
-				    		<td colspan="4"><input type="textarea" id="content" value="백준 100문제 모음집입니다." readonly /></td>
-				    	</tr>
-			    	</table>
-				</div>
 				
 		      	<br><br>
 			</div>
