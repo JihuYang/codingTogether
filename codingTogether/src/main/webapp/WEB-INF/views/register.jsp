@@ -20,30 +20,7 @@
 </style>
 </head>
 <body>
-  <nav class="light-green lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="./register">로그인</a></li>
-        <li><a href="./recommendProblem">문제 추천</a></li>
-        <li><a href="./solvedProblem">푼 문제 등록</a></li>
-        <li><a href="./manageCodingsite">코딩 사이트 관리</a></li>
-        <li><a href="./mypage/problems">mypage - my problems</a></li>
-        <li><a href="./mypage/information">myPage - 내 정보 수정</a></li>
-        <li><a href="./mypage/activities">myPage - my activities</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="./register">로그인</a></li>
-        <li><a href="./recommendProblem">문제 추천</a></li>
-        <li><a href="./solvedProblem">푼 문제 등록</a></li>
-        <li><a href="./manageCodingsite">코딩 사이트 관리</a></li>
-        <li><a href="./mypage/problems">mypage - my problems</a></li>
-        <li><a href="./mypage/information">myPage - 내 정보 수정</a></li>
-        <li><a href="./mypage/activities">myPage - my activities</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+	<%@ include file="./header.jsp"%>
   
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
@@ -67,7 +44,7 @@
     </div>
     
     
-    <div class="container">
+    <div class="container" style = "max-width = 60%;">
       <br><br>
       <h3 class="header center green-text">초기 목표 설정 </h3>
       <div class="row center">

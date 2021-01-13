@@ -30,6 +30,14 @@
 	rel="stylesheet" media="screen,projection" />
 <link href="../resources/css/style.css" type="text/css" rel="stylesheet"
 	media="screen,projection" />
+<style>
+    #table {display: table; width: 100%;}
+    .row {display: table-row;}
+    .cell {display: table-cell; padding: 15px; border-bottom: 1px solid #DDD;}
+    .col1 {width: 30%;}
+    .col2 {width: 100%;}
+
+</style>
 </head>
 <body>
 
@@ -104,12 +112,24 @@
 								<h6 class="m-0 font-weight-bold text-primary">내 정보</h6>
 							</div>
 							<div class="card-body">
-								<table id = "list" >
-									<tr><td>아이디 </td><td>입력한 아이디 </td></tr>
-									<tr><td>닉네임 </td><td>입력한 닉네임 </td></tr>
-									<tr><td>학번 </td><td>입력한 학번 </td></tr>
-									<tr><td>자기소개 </td><td>입력한 자기소개 </td></tr>
-									</table><br><br>
+						     	<div id="table">
+								      <div class="row">
+								        <span class="cell col1">아이디 </span>
+								        <span class="cell col2">입력한 아이디 </span>
+								      </div>
+								      <div class="row">
+								        <span class="cell col1">닉네임 </span>
+								        <span class="cell col2">입력한 닉네임 </span>
+								      </div>
+								      <div class="row">
+								        <span class="cell col1">학번 </span>
+								        <span class="cell col2">입력한 학번 </span>								      	
+								      </div>
+								      <div class="row">
+								        <span class="cell col1">자기소개 </span>
+								        <span class="cell col2">입력한 자기소개 </span>								      
+								      </div>
+								 </div>
 							</div>
 							<div class="row center">
 									<input type="button" value="수정하기 " onclick="showInfoEdit();" id="download-button" class="btn-large waves-effect waves-light green" />
@@ -121,10 +141,16 @@
 								<h6 class="m-0 font-weight-bold text-primary">내 목표 </h6>
 							</div>
 							<div class="card-body">
-								<table id = "list">
-									<tr><td>목표 내용 </td><td>입력한 목표 내용 </td></tr>
-									<tr><td>기간  </td><td>입력한 목표 기간 </td></tr>
-									</table><br><br>
+						     	<div id="table">
+								      <div class="row">
+								        <span class="cell col1">목표 내용 </span>
+								        <span class="cell col2">입력한 목표 내용  </span>
+								      </div>
+								      <div class="row">
+								        <span class="cell col1">기간 </span>
+								        <span class="cell col2">입력한 목표 기간  </span>
+								      </div>
+								 </div>								
 							</div>
 							<div class="row center">
 									<input type="button" value="수정하기 " onclick="showGoalEdit();" id="download-button" class="btn-large waves-effect waves-light green" />
@@ -136,13 +162,25 @@
 								<h6 class="m-0 font-weight-bold text-primary">내 정보 수정 </h6>
 							</div>
 							<div class="card-body">
-								<form id = "registerInfo" method="post" action="registerok">
-									<table id = "list" >
-									<tr><td>아이디 </td><td><input type="text" name="userID" placeholder = "입력한 아이디"/></td></tr>
-									<tr><td>닉네임 </td><td><input type="text" name="nickName" placeholder = "입력한 닉네임"/></td></tr>
-									<tr><td>학번 </td><td><input type="text" name="userNumber" placeholder = "입력한 학번"/></td></tr>
-									<tr><td>자기소개 </td><td><textarea cols="20" rows="10" name="intro" ></textarea></td></tr>
-									</table><br><br>		
+								<form id = "registerInfo" method="post" action="registerok">	
+							     	<div id="table">
+									      <div class="row">
+									        <span class="cell col1">아이디  </span>
+									        <span class="cell col2"><input type="text" name="userID" placeholder = "입력한 아이디"/> </span>
+									      </div>
+									      <div class="row">
+									        <span class="cell col1">닉네임 </span>
+									        <span class="cell col2"><input type="text" name="nickName" placeholder = "입력한 닉네임"/> </span>
+									      </div>
+									      <div class="row">
+									        <span class="cell col1">학번</span>
+									        <span class="cell col2"><input type="text" name="userNumber" placeholder = "입력한 닉네임"/> </span>
+									      </div>
+									      <div class="row">
+									        <span class="cell col1">자기소개 </span>
+									        <span class="cell col2"><textarea cols="20" rows="10" name="intro" ></textarea> </span>
+									      </div>									     									      
+									 </div>											
 								</form>
 							</div>
 						    <div class="row center">
@@ -157,10 +195,16 @@
 							</div>
 							<div class="card-body">
 								  <form id = "registerGoal" method="post" action="registerok" >
-									  <table id = "list">
-									  <tr><td>목표 내용 </td><td><input type="text" name="goal" placeholder = "입력한 목표내용"/></td></tr>
-									  <tr><td>기간  </td><td><input type="text" name="startDate" placeholder = "입력한 목표기간"/></td></tr>
-									  </table><br><br>
+							     	<div id="table">
+									      <div class="row">
+									        <span class="cell col1">목표 내용 </span>
+									        <span class="cell col2"><input type="text" name="goal" placeholder = "입력한 목표내용"/> </span>
+									      </div>
+									      <div class="row">
+									        <span class="cell col1">기간 </span>
+									        <span class="cell col2"><input type="text" name="startDate" placeholder = "입력한 목표기간"/> </span>
+									      </div>
+									 </div>									  
 								  </form>
 							</div>
 						    <div class="row center" style ="padding: 10px;">
